@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #f1e8e8;
+}
+@media all and (min-width:800px){
+    .img{
+        height: 300px;
+    }
+}
+.btn{
+    border-radius: 50px;
+    background-color: #fff;
+    position: relative;
+    bottom: 20px;
+    width: 130px;
+    color: tomato;
+}
+.dessert{
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+    align-items: center;
+}
+.count-show{
+    background-color: #fff;
+    width: 130px;
+    padding: 8px 7px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    /* left: 156px; */
+    text-align: center;
+    border: 1px solid rgb(79, 23, 191);
+    bottom: 60px;
+}
+.count-hide{
+    display: none;
+}
+.dish{
+    color: gray;
+}
+.dish-price{
+    color: tomato;
+}
+p{
+    font-weight: 900;
+}
+.list{
+    line-height: 10px;
+}
