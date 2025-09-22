@@ -11,18 +11,19 @@
     <link rel="icon" href="./assets/images/favicon-32x32.png">
 </head>
 <body>
-<div class="container-fluid">
-    <div class="container-fluid">
-        <h1>Desserts</h1>
-    </div>
+<div class="container-fluid mt-3">
     <div class="row">
+
+    <div>
+        <h1 class="shadow">Desserts</h1>
+    </div>
         
-    <div class="row col-lg-9">
-        <div class="mt-5 col-md-4">
+    <div class="row col-lg-9" id="box">
+        <div class="mt-5 col-md-4 col-sm-6 ">
             <div class="dessert">
-                <img src="./assets/images/image-baklava-mobile.jpg" alt="" width="100%" height="" class="img img-thumbnail">
-                <button class="btn btn-primary" onclick="btnchange('btn1')"> <img src="./assets/images/icon-add-to-cart.svg" alt="">Add to cart</button>
-                <div class="count-hide" id="btn1"><img src="./assets/images/minus.png" alt="" width="15px"> <span>0</span> <img src="./assets/images/plus.png" width="15px" alt=""></div>
+                <img src="./assets/images/image-baklava-mobile.jpg" alt="" width="100%" height="" class="img img-thumbnail" id="ibaklva">
+                <button class="btn btn-primary" onclick="btnchange('btn1','btn01','Pistachio baklva','4.00')" id="btn01"> <img src="./assets/images/icon-add-to-cart.svg" alt="">Add to cart</button>
+                <div class="count-hide" id="btn1" ><img src="./assets/images/minus.png"  alt="" width="15px"> <span>0</span> <img src="./assets/images/plus.png" width="15px" alt=""></div>
             </div>
             <div class="list">
                 <p class="dish">Baklava</p>
@@ -30,10 +31,10 @@
                 <p class="dish-price">$4.00</p>
             </div>
         </div>
-        <div class="mt-5 col-md-4">
+        <div class="mt-5 col-md-4 col-sm-6 ">
             <div class="dessert">
-                <img src="./assets/images/image-brownie-mobile.jpg" alt="" width="100%" height="" class="img img-thumbnail">
-                <button class="btn btn-primary" onclick="btnchange('btn2')"> <img src="./assets/images/icon-add-to-cart.svg" alt="">Add to cart</button>
+                <img src="./assets/images/image-brownie-mobile.jpg" alt="" width="100%" height="" class="img img-thumbnail" id="ibrownie">
+                <button class="btn btn-primary" onclick="btnchange('btn2','btn02','Salted Caramel Brownie','4.50')" id="btn02"> <img src="./assets/images/icon-add-to-cart.svg" alt="">Add to cart</button>
                 <div class="count-hide" id="btn2"><img src="./assets/images/minus.png" alt="" width="15px"> <span>0</span> <img src="./assets/images/plus.png" width="15px" alt=""></div>
             </div>
             <div class="list">
@@ -42,11 +43,11 @@
                 <p class="dish-price">$4.50</p>
             </div>
         </div>
-        <div class="mt-5 col-md-4">
+        <div class="mt-5 col-md-4 col-sm-6 ">
             <div class="dessert">
-                <img src="./assets/images/image-cake-mobile.jpg" alt="" width="100%" height="" class="img img-thumbnail">
-                <button class="btn btn-primary"> <img src="./assets/images/icon-add-to-cart.svg" alt="">Add to cart</button>
-                <div class="count-hide"><img src="./assets/images/minus.png" alt="" width="15px"> <span>0</span> <img src="./assets/images/plus.png" width="15px" alt=""></div>
+                <img src="./assets/images/image-cake-mobile.jpg" alt="" width="100%" height="" class="img img-thumbnail" id="icake">
+                <button class="btn btn-primary" onclick="btnchange('btn3','btn03','Red Velvet Cake','4.50')" id="btn03"> <img src="./assets/images/icon-add-to-cart.svg" alt="">Add to cart</button>
+                <div class="count-hide" id="btn3"><img src="./assets/images/minus.png" alt="" width="15px"> <span>0</span> <img src="./assets/images/plus.png" width="15px" alt=""></div>
             </div>
             <div class="list">
                 <p class="dish">Cake</p>
@@ -54,11 +55,11 @@
                 <p class="dish-price">$4.50</p>
             </div>
         </div>
-        <div class="mt-5 col-md-4">
+        <div class="mt-5 col-md-4 col-sm-6">
             <div class="dessert">
-                <img src="./assets/images/image-creme-brulee-mobile.jpg" alt="" width="100%" height="" class="img img-thumbnail">
-                <button class="btn btn-primary"> <img src="./assets/images/icon-add-to-cart.svg" alt="">Add to cart</button>
-                <div class="count-hide"><img src="./assets/images/minus.png" alt="" width="15px"> <span>0</span> <img src="./assets/images/plus.png" width="15px" alt=""></div>
+                <img src="./assets/images/image-creme-brulee-mobile.jpg" alt="" width="100%" height="" class="img img-thumbnail" id="ibrulee">
+                <button class="btn btn-primary" onclick="btnchange('btn4','btn04','Vanilla Bean Crème Brûlée','7.00')" id="btn04"> <img src="./assets/images/icon-add-to-cart.svg" alt="">Add to cart</button>
+                <div class="count-hide" id="btn4" ><img src="./assets/images/minus.png" alt="" width="15px"> <span>0</span> <img src="./assets/images/plus.png" width="15px" alt=""></div>
             </div>
             <div class="list">
                 <p class="dish">Crème Brûlée</p>
@@ -66,11 +67,11 @@
                 <p class="dish-price">$7.00</p>
             </div>
         </div>
-        <div class="mt-5 col-md-4">
+        <div class="mt-5 col-md-4 col-sm-6">
             <div class="dessert">
-                <img src="./assets/images/image-macaron-mobile.jpg" alt="" width="100%" height="" class="img img-thumbnail">
-                <button class="btn btn-primary"> <img src="./assets/images/icon-add-to-cart.svg" alt="">Add to cart</button>
-                <div class="count-hide"><img src="./assets/images/minus.png" alt="" width="15px"> <span>0</span> <img src="./assets/images/plus.png" width="15px" alt=""></div>
+                <img src="./assets/images/image-macaron-mobile.jpg" alt="" width="100%" height="" class="img img-thumbnail" id="imacaron">
+                <button class="btn btn-primary" onclick="btnchange('btn5','btn05','Macaron Mix of Five','8.00')" id="btn05"> <img src="./assets/images/icon-add-to-cart.svg" alt="">Add to cart</button>
+                <div class="count-hide" id="btn5"><img src="./assets/images/minus.png" alt="" width="15px"> <span>0</span> <img src="./assets/images/plus.png" width="15px" alt=""></div>
             </div>
             <div class="list">
                 <p class="dish">Macaron</p>
@@ -78,11 +79,11 @@
                 <p class="dish-price">$8.00</p>
             </div>
         </div>
-        <div class="mt-5 col-md-4">
+        <div class="mt-5 col-md-4 col-sm-6">
             <div class="dessert">
-                <img src="./assets/images/image-meringue-mobile.jpg" alt="" width="100%" height="" class="img img-thumbnail">
-                <button class="btn btn-primary"> <img src="./assets/images/icon-add-to-cart.svg" alt="">Add to cart</button>
-                <div class="count-hide"><img src="./assets/images/minus.png" alt="" width="15px"> <span>0</span> <img src="./assets/images/plus.png" width="15px" alt=""></div>
+                <img src="./assets/images/image-meringue-mobile.jpg" alt="" width="100%" height="" class="img img-thumbnail" id="imerngue">
+                <button class="btn btn-primary" onclick="btnchange('btn6','btn06','Lemon Meringue Pie','5.50')" id="btn06"> <img src="./assets/images/icon-add-to-cart.svg" alt="">Add to cart</button>
+                <div class="count-hide" id="btn6"><img src="./assets/images/minus.png" alt="" width="15px"> <span>0</span> <img src="./assets/images/plus.png" width="15px" alt=""></div>
             </div>
             <div class="list">
                 <p class="dish">Pie</p>
@@ -90,11 +91,11 @@
                 <p class="dish-price">$5.50</p>
             </div>
         </div>
-        <div class="mt-5 col-md-4">
+        <div class="mt-5 col-md-4 col-sm-6">
             <div class="dessert">
-                <img src="./assets/images/image-panna-cotta-mobile.jpg" alt="" width="100%" height="" class="img img-thumbnail">
-                <button class="btn btn-primary"> <img src="./assets/images/icon-add-to-cart.svg" alt="">Add to cart</button>
-                <div class="count-hide"><img src="./assets/images/minus.png" alt="" width="15px"> <span>0</span> <img src="./assets/images/plus.png" width="15px" alt=""></div>
+                <img src="./assets/images/image-panna-cotta-mobile.jpg" alt="" width="100%" height="" class="img img-thumbnail" id="icotta">
+                <button class="btn btn-primary" onclick="btnchange('btn7','btn07','Vanilla Panna Cotta','6.50')" id="btn07" > <img src="./assets/images/icon-add-to-cart.svg" alt="">Add to cart</button>
+                <div class="count-hide" id="btn7"><img src="./assets/images/minus.png" alt="" width="15px"> <span>0</span> <img src="./assets/images/plus.png" width="15px" alt=""></div>
             </div>
             <div class="list">
                 <p class="dish">Panna Cotta</p>
@@ -102,11 +103,11 @@
                 <p class="dish-price">$6.50</p>
             </div>
         </div>
-        <div class="mt-5 col-md-4">
+        <div class="mt-5 col-md-4 col-sm-6">
             <div class="dessert">
-                <img src="./assets/images/image-tiramisu-mobile.jpg" alt="" width="100%" height="" class="img img-thumbnail">
-                <button class="btn btn-primary"> <img src="./assets/images/icon-add-to-cart.svg" alt="">Add to cart</button>
-                <div class="count-hide"><img src="./assets/images/minus.png" alt="" width="15px"> <span>0</span> <img src="./assets/images/plus.png" width="15px" alt=""></div>
+                <img src="./assets/images/image-tiramisu-mobile.jpg" alt="" width="100%" height="" class="img img-thumbnail" id="itiramisu">
+                <button class="btn btn-primary" onclick="btnchange('btn8','btn08','Classic Tiramisu','5.50')" id="btn08"> <img src="./assets/images/icon-add-to-cart.svg" alt="">Add to cart</button>
+                <div class="count-hide" id="btn8"><img src="./assets/images/minus.png" alt="" width="15px"> <span>0</span> <img src="./assets/images/plus.png" width="15px" alt=""></div>
             </div>
             <div class="list">
                 <p class="dish">Tiramisu</p>
@@ -114,11 +115,11 @@
                 <p class="dish-price">$5.50</p>
             </div>
         </div>
-        <div class="mt-5 col-md-4">
+        <div class="mt-5 col-md-4 col-sm-6">
             <div class="dessert">
-                <img src="./assets/images/image-waffle-mobile.jpg" alt="" width="100%" height="" class="img img-thumbnail">
-                <button class="btn btn-primary"> <img src="./assets/images/icon-add-to-cart.svg" alt="">Add to cart</button>
-                <div class="count-hide"><img src="./assets/images/minus.png" alt="" width="15px"> <span>0</span> <img src="./assets/images/plus.png" width="15px" alt=""></div>
+                <img src="./assets/images/image-waffle-mobile.jpg" alt="" width="100%" height="" class="img img-thumbnail" id="iwaffle">
+                <button class="btn btn-primary" onclick="btnchange('btn9','btn09','Waffle with Berries','6.50')" id="btn09"> <img src="./assets/images/icon-add-to-cart.svg" alt="">Add to cart</button>
+                <div class="count-hide" id="btn9"><img src="./assets/images/minus.png" alt="" width="15px"> <span>0</span> <img src="./assets/images/plus.png" width="15px" alt=""></div>
             </div>
             <div class="list">
                 <p class="dish">Waffle</p>
@@ -129,6 +130,25 @@
     </div>
     <div class="row col-lg-3">
 
+    <div class="box2">
+        <h2 class="cart-head">Your Cart(0)</h2>
+        <div class="item-cart" id="item-cart">
+            
+            <img src="./assets/images/illustration-empty-cart.svg" alt="" class="empty-img" id="empty-img">
+            <p id="text" class="text">You added item will apper here</p>
+       
+        <div class="hide" id="order">
+            <div id="carbon-neutral">
+            <img src="./assets/images/icon-carbon-neutral.svg" alt=""> <p>This is <strong>carbon-neutral</strong> delivery</p>
+            </div>
+            <div id="order-btn-div">
+            <button class="btn btn-danger " id="order-btn">Confirm Order</button>
+            </div>
+
+         </div>
+        </div>
+        
+    </div>
     </div>
     </div>
 </div>
