@@ -6,11 +6,12 @@ body{
 }
 #head{
     color: rgba(174, 30, 210, 0.614);
+    
 }
 #head::first-letter{
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 55px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: rgb(38, 255, 0);
+    font-size: 60px;
 }
 @media all and (min-width:800px){
     .img{
@@ -76,7 +77,6 @@ p{
 }
 .box2{
     background-color: #f7f1f5;
-   
 }
 .cart-head{
     padding: 30px 0px 50px 20px;
@@ -165,8 +165,9 @@ p{
 .orderpase{
     background-color: rgb(255, 255, 255);
     position: fixed;
-    padding: 10px;
+    padding: 20px;
     border-radius: 10px;
+    
 }
 .box3:hover  body{
     background-color: grey;
