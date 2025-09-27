@@ -4,6 +4,14 @@
 body{
     background-color: #f1e8e8;
 }
+#head{
+    color: rgba(174, 30, 210, 0.614);
+}
+#head::first-letter{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 55px;
+    color: rgb(38, 255, 0);
+}
 @media all and (min-width:800px){
     .img{
         height: 300px;
@@ -174,4 +182,7 @@ p{
 }
 .hided{
     background-color: #f4d3e8;
+}
+.hide-cart{
+    display: none;
 }

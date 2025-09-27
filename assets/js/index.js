@@ -16,6 +16,8 @@ function btnchange(val,vals,dish,id,rate){
     order.classList.remove("hide")
     addcart(dish,id,rate)
     calrate(rate)
+    length()
+
 }
   
 // show the product name and price in cart 
@@ -27,7 +29,7 @@ function addcart(dish,id,rate){
             itemcart.classList = ("list-dish");
             let div1 = document.createElement("div");
             div1.innerHTML = `
-            <div class="list-dish" >
+            <div class="list-dish" id="a1">
                     <div><p>Pistachio baklva</p>
                         <div class="dish-detail">
                             <p class="dcount">1x</p>
@@ -43,7 +45,7 @@ function addcart(dish,id,rate){
             itemcart.classList = ("list-dish");
             let div2 = document.createElement("div");
             div2.innerHTML = `
-            <div class="list-dish" >
+            <div class="list-dish" id="a2">
                     <div><p>Salted Caramel Brownie</p>
                         <div class="dish-detail">
                             <p class="dcount">1x</p>
@@ -59,12 +61,12 @@ function addcart(dish,id,rate){
             itemcart.classList = ("list-dish");
             let div3 = document.createElement("div");
             div3.innerHTML = `
-            <div class="list-dish" >
-                    <div><p>Waffle with Berries</p>
+            <div class="list-dish" id="a3">
+                    <div><p>Red Velvet Cake</p>
                         <div class="dish-detail">
                             <p class="dcount">1x</p>
-                            <p class="rate">@ $21.00</p>
-                            <p class="addrate" >$21.00</p>
+                            <p class="rate">@ $14.00</p>
+                            <p class="addrate" >$14.00</p>
                         </div>
                     </div>
                 </div> 
@@ -75,12 +77,12 @@ function addcart(dish,id,rate){
             itemcart.classList = ("list-dish");
             let div4 = document.createElement("div");
             div4.innerHTML = `
-            <div class="list-dish" >
-                    <div><p>Waffle with Berries</p>
+            <div class="list-dish" id="a4">
+                    <div><p>Vanilla Bean Crème Brûlée</p>
                         <div class="dish-detail">
                             <p class="dcount">1x</p>
-                            <p class="rate">@ $21.00</p>
-                            <p class="addrate" >$21.00</p>
+                            <p class="rate">@ $7.00</p>
+                            <p class="addrate" >$7.00</p>
                         </div>
                     </div>
                 </div> 
@@ -91,12 +93,12 @@ function addcart(dish,id,rate){
             itemcart.classList = ("list-dish");
             let div5 = document.createElement("div");
             div5.innerHTML = `
-            <div class="list-dish" >
-                    <div><p>Waffle with Berries</p>
+            <div class="list-dish" id="a5">
+                    <div><p>Macaron Mix of Five</p>
                         <div class="dish-detail">
                             <p class="dcount">1x</p>
-                            <p class="rate">@ $21.00</p>
-                            <p class="addrate" >$21.00</p>
+                            <p class="rate">@ $8.00</p>
+                            <p class="addrate" >$8.00</p>
                         </div>
                     </div>
                 </div> 
@@ -107,28 +109,28 @@ function addcart(dish,id,rate){
             itemcart.classList = ("list-dish");
             let div6 = document.createElement("div");
             div6.innerHTML = `
-            <div class="list-dish" >
-                    <div><p>Waffle with Berries</p>
+            <div class="list-dish" id="a6">
+                    <div><p>Lemon Meringue Pie</p>
                         <div class="dish-detail">
                             <p class="dcount">1x</p>
-                            <p class="rate">@ $21.00</p>
-                            <p class="addrate" >$21.00</p>
+                            <p class="rate">@ $10.00</p>
+                            <p class="addrate" >$10.00</p>
                         </div>
                     </div>
                 </div> 
                `
                 showorder.prepend(div6);
             break;
-        case 'Vanilla Panna Cotta':
+        case 'Lemon Meringue Pie':
             itemcart.classList = ("list-dish");
             let div7 = document.createElement("div");
             div7.innerHTML = `
-            <div class="list-dish" >
-                    <div><p>Waffle with Berries</p>
+            <div class="list-dish" id="a7">
+                    <div><p>Lemon Meringue Pie</p>
                         <div class="dish-detail">
                             <p class="dcount">1x</p>
-                            <p class="rate">@ $21.00</p>
-                            <p class="addrate" >$21.00</p>
+                            <p class="rate">@ $9.00</p>
+                            <p class="addrate" >$9.00</p>
                         </div>
                     </div>
                 </div>` 
@@ -138,7 +140,7 @@ function addcart(dish,id,rate){
             itemcart.classList = ("list-dish");
             let div8 = document.createElement("div");
             div8.innerHTML =`
-            <div class="list-dish" id="f8">
+            <div class="list-dish" id="a8">
                     <div><p>Classic Tiramisu</p>
                         <div class="dish-detail">
                             <p class="dcount">1x</p>
@@ -152,10 +154,9 @@ function addcart(dish,id,rate){
             break;
         case 'Waffle with Berries':
             itemcart.classList = ("list-dish");
-            itemcart.id = ("list");
             let div9 = document.createElement("div");
             div9.innerHTML = `
-            <div class="list-dish" >
+            <div class="list-dish " id="a9">
                     <div><p>Waffle with Berries</p>
                         <div class="dish-detail">
                             <p class="dcount">1x</p>
@@ -188,18 +189,36 @@ function calrate(rate){
 }
 
 // cancle the dish item
-function cleardish(clear,val,id1,id2){
+function cleardish(clear,val,id1,id2,aa){
     let clearelement = document.getElementById(clear);
-    clearelement.classList = "hide";
+    clearelement.classList = "hide-cart";
     total_rate -= val;
     let showrate = document.getElementById("rate");
     showrate.innerHTML = `$${total_rate.toFixed(2)}`
     let btn = document.getElementById(id1);
     let btns = document.getElementById(id2);
     btn.classList = "count-hide";
-    btns.classList = "btn";
+    btns.classList = "btn btn-primary";
+    length()
+    let cart = document.getElementById(aa)
+    cart.remove()
+    
 }
 
+
+// this  function crate for order diabled for empty cart
+function length(){
+    let arr = document.getElementsByClassName("hide-cart");
+    let arrlength = arr.length;
+    if(arrlength==9){
+    let orderbtn = document.getElementById("order-btn");
+    orderbtn.disabled = true
+    }
+    else if(arrlength<9){
+        let orderbtn = document.getElementById("order-btn");
+        orderbtn.disabled = false
+    }
+}
 
 function showemptyimgandtext(){
     let emptyimg = document.getElementById("empty-img");
